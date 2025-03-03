@@ -25,8 +25,10 @@ const openModalBtns = document.querySelectorAll(".openModalBtn");
                 }
                 
                 logAction(`${h2Text}`);
-               
-                openModalBtns[i].disabled = true;                
+
+                             
+                openModalBtns[i].disabled = true;               
+             
                 buttonsClicked++;               
                 if (buttonsClicked === openModalBtns.length) {
                     alert('Congrats!!! You have completed all the current tasks');
@@ -37,7 +39,7 @@ const openModalBtns = document.querySelectorAll(".openModalBtn");
         function logAction(text) {
             const timeStamp = new Date().toLocaleTimeString();
             const logMessage = document.createElement("div");
-            logMessage.innerHTML = `<h1 class="bg-gray-100 p-4 my-4">You have completed the task ${text} at ${timeStamp}</h1>`;
+            logMessage.innerHTML = `<h1 class="bg-gray-100 rounded-lg p-4 my-4">You have completed the task ${text} at ${timeStamp}</h1>`;
             displayActivity.appendChild(logMessage);
         }
         
